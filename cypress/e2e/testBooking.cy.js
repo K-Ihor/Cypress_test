@@ -9,7 +9,7 @@ describe('Booking', () => {
     });
 
     searchQueries.forEach((searchQuery) => {
-        it(`search for "${searchQuery}"`, () => {
+        it(`search with filter "${searchQuery}"`, () => {
             basePage.inputDestination(searchQuery);
             basePage.setDataFilter();
             resultPage.assertResultCard(searchQuery.split(',')[0]);
