@@ -12,7 +12,7 @@ describe('Login', () => {
         basePage.goToSignInPage();
         basePage.typeEmailData(signInPage.wrongEmail);
 
-        cy.get('#username-note').should('be.visible').and('contain.text', "Please check if the email address you've entered is correct.");
+        cy.get(signInPage.errorField).should('be.visible').and('contain.text', signInPage.errorMessage);
 
     });
 

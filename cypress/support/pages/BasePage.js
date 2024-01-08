@@ -47,7 +47,6 @@ export class BasePage{
     }
 
     typeEmailData(email){
-        // cy.get(signInPage.continueWithEmail).should('be.visible');
         cy.get(signInPage.inputEmailAddress).type(email);
         cy.get(signInPage.continueWithEmail).click();
     }
